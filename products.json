@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "title": "Marcador Negro",
+    "description": "Marcador color negro a base de agua para pizarras/pizarrones.",
+    "price": 100,
+    "thumbnail": "https://d22fxaf9t8d39k.cloudfront.net/7048c9a8198636bae8212267c57cfe49c6c8cae83883c3f853ce8cfe27b5f40380237.png",
+    "code": "abc123",
+    "stock": 42,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "id": 2,
+    "title": "Marcador Rojo",
+    "description": "Marcador color rojo a base de agua para pizarras/pizarrones.",
+    "price": 120,
+    "thumbnail": "https://www.librerialacentral.com.ar/wp-content/uploads/2021/10/MARCADOR-PIZARRA-TRABI-450-ROJO.JPG.png",
+    "code": "abc124",
+    "stock": 27,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "id": 3,
+    "title": "Marcador Verde",
+    "description": "Marcador color verde a base de agua para pizarras/pizarrones.",
+    "price": 110,
+    "thumbnail": "https://www.librerialacentral.com.ar/wp-content/uploads/2021/10/MARCADOR-PIZARRA-TRABI-450-VERDE.JPG.png",
+    "code": "abc125",
+    "stock": 16,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "id": 4,
+    "title": "Lapicera Azul",
+    "description": "Lapicera azul, trazo fino.",
+    "price": 80,
+    "thumbnail": "https://tusuper.com.ar/image/cache/catalog/P2020/Libreria/Bic-Lapicera-Azul-Trazo-Fino-1-Unidad-min-800x800.jpg",
+    "code": "abc132",
+    "stock": 50,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "id": 5,
+    "title": "Lapicera Roja",
+    "description": "Lapicera roja, trazo fino.",
+    "price": 90,
+    "thumbnail": "https://www.bikabik.com.ar/wp-content/uploads/2020/07/bic-cristal-rojo1-e33aba0ecd892598d715910383434105-640-0-min.jpg",
+    "code": "abc133",
+    "stock": 25,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "id": 6,
+    "title": "Lapicera Verde",
+    "description": "Lapicera verde, cristal.",
+    "price": 90,
+    "thumbnail": "https://www.distribuidoraorfei.com.ar/fotito/500/500/XY/grafica/productos/070000/072482-01-01.jpg",
+    "code": "abc134",
+    "stock": 20,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "id": 7,
+    "title": "Lapicera Negra",
+    "description": "Lapicera negra, trazo fino.",
+    "price": 95,
+    "thumbnail": "https://www.bikabik.com.ar/wp-content/uploads/2020/07/boligrafo-bic-cristal-fine-plus-08mm-negro-caja-x-50-unid-d_nq_np_986157-mla29660393861_032019-f1-93fe38ffc9d7af9a0915861004076941-1024-1024-min.jpg",
+    "code": "abc135",
+    "stock": 38,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "id": 8,
+    "title": "Resaltador Amarillo",
+    "description": "Resaltador amarillo fluo, punta redonda.",
+    "price": 150,
+    "thumbnail": "https://tiotomar.vtexassets.com/arquivos/ids/203161-800-800?v=638099796397270000&width=800&height=800&aspect=true",
+    "code": "abc142",
+    "stock": 35,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "id": 9,
+    "title": "Resaltador Verde",
+    "description": "Resaltador verde fluo, punta redonda.",
+    "price": 150,
+    "thumbnail": "https://tiotomar.vtexassets.com/arquivos/ids/203168-800-800?v=638099796409930000&width=800&height=800&aspect=true",
+    "code": "abc143",
+    "stock": 31,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "id": 10,
+    "title": "Resaltador Rosa",
+    "description": "Resaltador rosa fluo, punta redonda.",
+    "price": 160,
+    "thumbnail": "https://ofishop.com/4151-large_default/resaltador-bic-marking-rosa-.jpg",
+    "code": "abc144",
+    "stock": 28,
+    "category": "Articulos libreria.",
+    "status": true
+  },
+  {
+    "title": "Marcador universo",
+    "description": "Marcador color universo a base de agua para pizarras/pizarrones.",
+    "price": 100,
+    "thumbnail": "https://d22fxaf9t8d39k.cloudfront.net/7048c9a8198636bae8212267c57cfe49c6c8cae83883c3f853ce8cfe27b5f40380237.png",
+    "code": "abc333",
+    "stock": 42,
+    "category": "Articulos libreria.",
+    "id": 11,
+    "status": true
+  }
+]

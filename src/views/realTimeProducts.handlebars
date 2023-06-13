@@ -1,0 +1,111 @@
+<form id="form-products" style="margin: auto">
+  <div style="margin-bottom: 16px">
+    <div class="col-md-2 mx-auto">
+      <label for="title"> Title: </label>
+      <input
+        type="text"
+        name="title"
+        id="form-title"
+        style="margin-bottom: 16px"
+        class="form-control"
+      />
+    </div>
+    <div class="col-md-2 mx-auto">
+      <label for="price"> Price: </label>
+      <input
+        type="number"
+        name="price"
+        id="form-price"
+        style="margin-bottom: 16px"
+        step="1"
+        class="form-control"
+      />
+    </div>
+    <div class="col-md-2 mx-auto">
+      <label for="thumbnail"> Img URL </label>
+      <input
+        type="text"
+        name="thumbnail"
+        id="form-thumbnail"
+        style="margin-bottom: 16px"
+        class="form-control"
+      />
+    </div>
+    <div class="col-md-2 mx-auto">
+      <label for="description"> Description: </label>
+      <input
+        type="text"
+        name="description"
+        id="form-description"
+        style="margin-bottom: 16px"
+        step="1"
+        class="form-control"
+      />
+    </div>
+    <div class="col-md-2 mx-auto">
+      <label for="category"> Category: </label>
+      <input
+        type="text"
+        name="category"
+        id="form-category"
+        style="margin-bottom: 16px"
+        step="1"
+        class="form-control"
+      />
+    </div>
+    <div class="col-md-2 mx-auto">
+      <label for="stock"> Stock: </label>
+      <input
+        type="number"
+        name="stock"
+        id="form-stock"
+        style="margin-bottom: 16px"
+        step="1"
+        class="form-control"
+      />
+    </div>
+    <div class="col-md-2 mx-auto">
+      <label for="code"> Code: </label>
+      <input
+        type="text"
+        name="code"
+        id="form-code"
+        style="margin-bottom: 16px"
+        step="1"
+        class="form-control"
+      />
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <input type="submit" value="Create product" class="btn btn-success" />
+    </div>
+  </div>
+</form>
+
+<div>
+  
+  {{#if data}}
+    <h1 class="textProducts">Products</h1>
+    <div class="products-container" id="products">
+    {{#each data}}
+      <div class="card" style="width: 18rem;">
+        <img src={{thumbnail}} class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">${{price}}</p>
+          <p class="card-text">{{description}}</p>
+          <p class="card-text">{{category}}</p>
+          <p class="card-text">{{stock}}</p>
+          <p class="card-text">{{code}}</p>
+          <input type="submit" value="add to cart" onclick="" class="btn btn-primary">
+          <input type="button" value="delete" onclick="deleteProduct({{id}})" class="btn btn-danger">
+        </div>
+      </div>
+    {{/each}}
+    </div>
+  {{else}}
+    There are no products
+  {{/if}}
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTimeProducts.js"></script>

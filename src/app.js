@@ -1,43 +1,49 @@
 import express from "express";
-import ProductManager from "./productManager.js";
-const itemContainer = new ProductManager();
+import { cartsRouter } from "./routes/carts.router.js";
+import { productsRouter } from "./routes/products.router.js";
+import { homeRouter } from "./routes/home.router.js";
+import { realTimeRouterSockets } from "./routes/realTimeProducts.router.js";
+import { __dirname, connectMongo } from "./utils.js";
+import { connectSocket } from "./sockets.js";
+import handlebars from "express-handlebars";
+import path from "path";
 
+
+/*----------------------PORT-CONFIG---------------------*/
 const app = express();
 const PORT = 8080;
 
+const httpServer = app.listen(PORT, () => {
+  console.log(`Listening on port: http://localhost:${PORT}/home`);
+});
+
+/*---------------------CONNECTIONS----------------------*/
+connectMongo();
+connectSocket(httpServer);
+
+
+/*------------------TEMPLATE-ENGINES-------------------*/
+app.engine('handlebars', handlebars.engine());
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(PORT, () => {
-  console.log(`Listening on port: http://localhost:${PORT}`);
-});
 
-app.get("/products", async(req, res) => {
-  try {
-    const { limit } = req.query;
-  const products = await itemContainer.getProducts();
-  if(limit) {
-    res.status(200).json(products.slice(0, limit));
-  } else {
-    res.status(200).json(products);
-  }
-  } catch (error) {
-    res.status(500).json({ message: "There was an error" });
-  }
-  
-});
+/*------------------------ROUTERS-------------------------*/
+//api rest json router
+app.use("/api/products", productsRouter);
+app.use("/api/carts", cartsRouter);
+//HTML render server side router
+app.use("/home", homeRouter);
+//Socket router
+app.use("/realtimeproducts", realTimeRouterSockets);
 
-app.get("/products/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-  const product = await itemContainer.getProductById(parseInt(id));
-  if(!product) {    
-    return res.status(404).json({ error: "Product not found" });
-  } else {
-    res.status(200).json(product);
-  }
-  } catch (error) {
-    res.status(500).json({ message: "There was an error" });
-  }
-  
-})
+
+
+app.get("*"), (req, res) => {
+  res.status(404).json({ status: "error", msg: "Not found", data: {} })
+};
+
+

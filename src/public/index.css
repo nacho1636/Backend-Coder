@@ -1,0 +1,9 @@
+ul li {
+    list-style: none;
+    list-style-type: none;
+    margin: 0.8em;
+    padding: 0.3em;
+    text-transform: uppercase;
+    background-color: rgba(247, 204, 204, 0.959);
+    border: 0.3rem solid whitesmoke;
+    border-radius: 2rem; }
